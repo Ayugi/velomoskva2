@@ -7,6 +7,8 @@ app.views.MapView = Backbone.View.extend({
             // create a map in the "map" div, set the view to a given place and zoom
             var map = L.map('map', {zoomControl:false}).setView([42.35996, -71.05579], 16);
 
+
+
 // add an OpenStreetMap tile layer
 //            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 //                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
