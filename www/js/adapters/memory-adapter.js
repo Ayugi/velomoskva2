@@ -14,20 +14,10 @@ app.adapters.employee = (function () {
             return deferred.promise();
         },
 
-        findByName = function (searchKey) {
+        readAll = function () {
             var deferred = $.Deferred();
             var results = employees.filter(function (element) {
-                var fullName = element.firstName + " " + element.lastName;
-                return fullName.toLowerCase().indexOf(searchKey.toLowerCase()) > -1;
-            });
-            deferred.resolve(results);
-            return deferred.promise();
-        },
-
-        findByManager = function (managerId) {
-            var deferred = $.Deferred();
-            var results = employees.filter(function (element) {
-                return managerId === element.managerId;
+                return 1;
             });
             deferred.resolve(results);
             return deferred.promise();
@@ -51,8 +41,7 @@ app.adapters.employee = (function () {
     // The public API
     return {
         findById: findById,
-        findByName: findByName,
-        findByManager: findByManager
+        readAll: readAll
     };
 
 }());
